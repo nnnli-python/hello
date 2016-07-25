@@ -1,5 +1,5 @@
 #!/usr/bin/python
-# -*- coding: utf-8 -*-
+# -*- coding: utf_8 -*-
 
 # 从wsgiref模块导入:
 from wsgiref.simple_server import make_server

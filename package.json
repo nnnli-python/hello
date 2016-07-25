@@ -1,0 +1,21 @@
+{
+  "name": "python",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev":"python node.py app.py",
+    "start":"python app.py",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nnnli-python/hello.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nnnli-python/hello/issues"
+  },
+  "homepage": "https://github.com/nnnli-python/hello#readme"
+}
