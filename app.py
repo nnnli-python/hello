@@ -36,13 +36,13 @@ def rtxim_post():
     if name != 'abby':
        return '404';
     httpClient = None
-    helloMsg = '''Hello Developer!
+    helloMsg = '''小伙伴们!,辛苦了
     Abby 的产品需求更新了
     更新内容如下\n'''
     commit_info = '\n 具体更新细节 %s' % commit_url
     robotM = '\n  我是来自运维团队的R2机器人的消息通知'
-    devs = 'julian;jom;lewis;manu;jessica;yoko;wilson;abby;jean'
-    sessionid = '{45E974F3-B242-486b-8487-56C23D37FF59}'
+    devs = 'julian;jom;lewis;manu;jessica;jason;yoko;wilson;abby;jean;yang;aaron'
+    sessionid = '{45E974F3-B242-486b-8487-56C23D37FF61}'
     try:
         params = urllib.urlencode({'sender': 'robot', 'pwd': 'robot', 'receivers': devs, 'msg': helloMsg+message+commit_info+robotM, 'sessionid': sessionid})
         headers = {'Content-type': 'application/x-www-form-urlencoded', 'Accept': 'text/plain'}
