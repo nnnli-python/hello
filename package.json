@@ -1,6 +1,6 @@
 {
-  "name": "python-rtx-im",
-  "version": "0.1.0",
+  "name": "python",
+  "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -14,7 +14,7 @@
     "url": "git+https://github.com/nnnli-python/hello.git"
   },
   "author": "",
-  "license": "MIT",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/nnnli-python/hello/issues"
   },

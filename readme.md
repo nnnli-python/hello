@@ -4,7 +4,7 @@
 ### install
 
 ```
-easy_install  flask watchdog
+easy_install  flask
 ```
 
 ### start
