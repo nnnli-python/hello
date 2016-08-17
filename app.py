@@ -2,7 +2,7 @@
 # -*- coding: gbk -*-
 # -*- coding: utf-8 -*-
 
-import urllib, httplib,random,time
+import urllib, httplib,random,time,uuid
 from flask import Flask
 from flask import request
 from flask import Response
@@ -52,12 +52,16 @@ def rtxim_post():
     更新内容如下\n'''
     commit_info = '\n 具体更新细节 %s' % commit_url
     giturl_info = '\n 仓库地址 http://github.panli.com/abby/PanliByAbby'
-    robotM = '''\n  我是来自运维团队的R2机器人的消息通知
-    今日不错，来大伙来点段子：
+    robotM = '''\n  我是来自运维团队的R2机器人的消息通知！
+    -------------------------------
+    今日不错，语录先生道：
     %s
+    -------------------------------
+    我也是有底线的
+    -------------------------------
     ''' % arraym[num]
-    devs = 'julian,wilson,jason,jessica,yoko,lewis,manu,abby,yang,jean,aaron'
-    sessionid = '{45E974F3-B242-486b-8487-56C23D37FF91}'
+    devs = 'julian;wilson;jason;jessica;yoko;lewis;manu;abby;yang;jean;aaron'
+    sessionid = '{%s}' % uuid.uuid4()
     try:
         params = urllib.urlencode({'sender': 'robot', 'pwd': 'robot', 'receivers': devs, 'msg': helloMsg+message+commit_info+giturl_info+robotM, 'sessionid': sessionid})
         headers = {'Content-type': 'application/x-www-form-urlencoded', 'Accept': 'text/plain'}
