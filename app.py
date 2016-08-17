@@ -40,12 +40,15 @@ def rtxim_post():
     message    = data[0]["message"].encode("gbk")
     name    = data[0]["author"]["name"].encode("gbk")
     num = random.randrange(0,len(arraym))
+    isseedstr = message.strip()[0:4]
     print type(data[0])
     print commit_url
     print message
     print name
-    if name != 'abby':
-       return '404';
+    print isseedstr
+    if isseedstr == '不要':
+        return ' 404';
+  
     httpClient = None
     helloMsg = '''小伙伴们!,辛苦了
     Abby 的产品需求更新了
@@ -60,7 +63,7 @@ def rtxim_post():
     我也是有底线的
     -------------------------------
     ''' % arraym[num]
-    devs = 'julian;wilson;jason;jessica;yoko;lewis;manu;abby;yang;jean;aaron'
+    devs = 'julian'
     sessionid = '{%s}' % uuid.uuid4()
     try:
         params = urllib.urlencode({'sender': 'robot', 'pwd': 'robot', 'receivers': devs, 'msg': helloMsg+message+commit_info+giturl_info+robotM, 'sessionid': sessionid})
