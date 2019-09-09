@@ -1,5 +1,7 @@
 ## Python 实现 rtx 消息通知
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/zanjs/hello-python-rxt.svg)](https://greenkeeper.io/)
+
 
 ### install
 
